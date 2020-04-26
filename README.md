@@ -1,4 +1,17 @@
+#project intro:
+ * welcome to my awesome project which is about NLP this projects was developed using:
+ 1-wepback 
+2-node js express frame work 
+3- aylien API.
+#project overview: 
+the project is easy to understand and configure you just need to follow the instructions below and It will be fine and perfect
+if you stuck you can visit the API doc : 
+https://docs.aylien.com 
+it will help a lot of your time to do so. 
+My advice Bring a cup of coffee and enjoy trying this project out good luck.. 
+
 # Project Instructions
+
 
 This repo is your starter code for the project. It is the same as the starter code we began with in lesson 2. Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!
 
