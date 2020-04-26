@@ -1,17 +1,18 @@
+import {checkForName} from "./nameChecker";
+
 function handleSubmit(event) {
     event.preventDefault()
 
     // check what text was put into the form field
     let word = document.getElementById('name').value
+    if (checkForName(word)) {
 
 
-    //https://api.aylien.com/api/v1/sentiment
-
-    console.log("::: Form Submitted :::")
-    fetch(`http://localhost:8081/test/${word}`)
-        .then(res => res.json())
-        .then(function (res) {
-            document.getElementById('results').innerHTML = `
+        console.log("::: Form Submitted :::")
+        fetch(`http://localhost:8081/test?input=${word}`)
+            .then(res => res.json())
+            .then(function (res) {
+                document.getElementById('results').innerHTML = `
             <div>
             <p>polarity : ${res.polarity}</p>
              <p>subjectivity : ${res.subjectivity}</p>
@@ -19,7 +20,8 @@ function handleSubmit(event) {
              <p>subjectivity confidence : ${res.subjectivity_confidence}</p>
              <p>Text : ${res.text}</p>
              </div>`
-        })
+            })
+    }
 }
 
 export {handleSubmit}

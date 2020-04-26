@@ -1,4 +1,5 @@
 import {handleSubmit} from "./formHandler";
+import "babel-polyfill"
 
 describe('Test, the function handleSubmit() should exist', () => {
     test('must return true', async () => {

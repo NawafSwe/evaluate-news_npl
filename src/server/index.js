@@ -38,9 +38,8 @@ app.get('/', function (req, res) {
 })
 
 
-app.get('/test/:word', function (req, res) {
-    let word = req.params.word;
-
+app.get('/test', function (req, res) {
+    let word = req.query.input;
     textapi.sentiment({
             'text': word
         }, function (error, response) {
